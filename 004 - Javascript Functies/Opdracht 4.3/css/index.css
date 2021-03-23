@@ -1,0 +1,22 @@
+#hoofd {
+    height: 300px;
+    width: 300px;
+    border: 3px black solid;
+    transition: 1s;
+}
+
+#gezicht {
+    height: 300px;
+    width: 300px;
+    border: 3px black solid;
+    transition: 1s;
+    top: 200px;
+}
+
+#mond {
+    height: 300px;
+    width: 300px;
+    border: 3px black solid;
+    transition: 1s;
+    top: 400px;
+}

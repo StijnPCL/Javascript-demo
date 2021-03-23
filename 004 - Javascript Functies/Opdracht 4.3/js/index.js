@@ -1,21 +1,36 @@
-var mijnauto = {
-    kleur: "blauw",
-    merk: "Ford",
-    snelheid: 0,
+var plaatjes = [1,2,3];
+var teller = 0;
 
-    gasgeven: function() {
-        this.snelheid += 5
-        console.log(this.snelheid);
-    },
+var hoofd = document.getElementById("hoofd");
+hoofd.style.backgroundImage = "url('../img/hoofd1.png')";
 
-    toeteren: function() {
-        console.log("toet!")
+hoofd.addEventListener("click", function() {
+    getNumber();
+    hoofd.style.backgroundImage = "url('../img/hoofd" + getNumber() +".png')";
+});
+
+var gezicht = document.getElementById("gezicht");
+gezicht.style.backgroundImage = "url('../img/gezicht1.png')";
+
+gezicht.addEventListener("click", function() {
+    getNumber();
+    gezicht.style.backgroundImage = "url('../img/gezicht" + getNumber() +".png')";
+});
+
+var mond = document.getElementById("mond");
+mond.style.backgroundImage = "url('../img/mond1.png')";
+
+mond.addEventListener("click", function() {
+    getNumber();
+    mond.style.backgroundImage = "url('../img/mond" + getNumber() +".png')";
+});
+
+function getNumber() {
+    if(teller >= plaatjes.length) {
+        teller = 1;
+    } else {
+        teller++;
     }
-}
-
-console.log(mijnauto.kleur);
-mijnauto.toeteren();
-
-for (var i = 0; i < 10; i++) {
-    mijnauto.gasgeven();
+    console.log(teller);
+    return teller;
 }
