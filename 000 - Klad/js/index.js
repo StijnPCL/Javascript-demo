@@ -1,0 +1,3 @@
+pictures.addEventListener("click", function() {
+    
+});
